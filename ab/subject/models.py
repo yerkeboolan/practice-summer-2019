@@ -24,7 +24,7 @@ class TopicManager(models.Manager):
 class Topic(models.Model):
     title = models.CharField(max_length=255)
     is_quiz = models.BooleanField()
-    subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
+    subject = models.ForeignKey(Subject, on_delete=models.CASCADE, related_name="topic")
 
 
     def __str__(self):
@@ -43,7 +43,7 @@ class SubtopicManager(models.Manager):
 
 class Subtopic(models.Model):
     title = models.CharField(max_length=255)
-    topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
+    topic = models.ForeignKey(Topic, on_delete=models.CASCADE, related_name="subtopic")
 
     def __str__(self):
         return "(" + str(self.pk) + ") " + self.title
