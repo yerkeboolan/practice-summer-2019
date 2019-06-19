@@ -124,5 +124,35 @@ class TopicList(APIView):
         except Topic.DoesNotExist:
             return Response(status=404)
 
+class SubtopicList(APIView):
+    def get(self, request):
+        lists = Subtopic.objects.all()
+        serializer = SubtopicSerializer(lists, many=True)
+        return Response(serializer.data)
 
+    def post(self, request):
+        serializer = SubtopicSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=200)
+        return Response(serializer.errors, status=400)
+
+    def put(self, request, pk):
+        try:
+            subtopic_query = Subtopic.objects.get(pk=pk)
+            serializer = SubtopicSerializer(subtopic_query, data=request.data, partial=True)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data, status=201)
+            return Response(serializer.errors, status=400)
+        except Subtopic.DoesNotExist:
+            return Response(status=404)
+
+    def delete(self, request, pk):
+        try:
+            subtopic_query = Subtopic.objects.get(pk=pk)
+            subtopic_query.delete()
+            return Response(status=204)
+        except Subtopic.DoesNotExist:
+            return Response(status=404)
 

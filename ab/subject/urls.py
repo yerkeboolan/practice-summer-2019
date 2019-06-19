@@ -11,5 +11,7 @@ urlpatterns = [
     path('subject/', views.SubjectList.as_view()),
     path('subject/<pk>/', views.SubjectList.as_view()),
     path('topic/', views.TopicList.as_view()),
-    path('topic/<pk>/', views.TopicList.as_view())
+    path('topic/<pk>/', views.TopicList.as_view()),
+    path('subtopic/', views.SubtopicList.as_view()),
+    path('subtopic/<pk>/', views.SubtopicList.as_view())
 ]

@@ -25,9 +25,15 @@ class SubjectTopicSerializer(serializers.ModelSerializer):
             'topic')
 
 
-class SubtopicSerializer(serializers.Serializer):
-    id = serializers.IntegerField(read_only=True)
-    title = serializers.CharField(required=True)
+class SubtopicSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Subtopic
+        fields = (
+            'pk',
+            'title',
+            'topic'
+        )
+        read_only_fields = ('pk', )
 
 class TopicSubtopicSerializer(serializers.ModelSerializer):
     subtopic = SubtopicSerializer(many=True, read_only=True)
@@ -51,3 +57,5 @@ class SubjectTopicSubtopicSerializer(serializers.ModelSerializer):
             'title',
             'topic',
         )
+
+
