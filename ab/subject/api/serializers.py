@@ -26,6 +26,7 @@ class SubjectTopicSerializer(serializers.ModelSerializer):
 
 
 class SubtopicSerializer(serializers.ModelSerializer):
+    # topic = serializers.IntegerField(write_only=True)
     class Meta:
         model = Subtopic
         fields = (
@@ -34,6 +35,17 @@ class SubtopicSerializer(serializers.ModelSerializer):
             'topic'
         )
         read_only_fields = ('pk', )
+
+
+    # def to_representation(self, instance):
+    #     data = super(SubtopicSerializer, self).to_representation(instance)
+    #     if instance.topic:
+    #         data['topic_detail'] = {
+    #             'pk': instance.topic.pk,
+    #             'title': instance.topic.title,
+    #             'bul_quiz_ba': instance.topic.is_quiz
+    #         }
+    #     return data
 
 class TopicSubtopicSerializer(serializers.ModelSerializer):
     subtopic = SubtopicSerializer(many=True, read_only=True)
@@ -47,6 +59,15 @@ class TopicSubtopicSerializer(serializers.ModelSerializer):
             'subtopic'
         )
         read_only_fields = ('pk',)
+
+
+    # def to_representation(self, instance):
+    #     data = super(TopicSubtopicSerializer, self).to_representation(instance)
+    #     if instance.subject:
+    #         data['subject_detail'] = {
+    #             'title': instance.subject.title,
+    #         }
+    #     return data
 
 class SubjectTopicSubtopicSerializer(serializers.ModelSerializer):
     topic = TopicSubtopicSerializer(many=True, read_only=True)

@@ -130,6 +130,17 @@ class SubtopicList(APIView):
         serializer = SubtopicSerializer(lists, many=True)
         return Response(serializer.data)
 
+
+
+class SubtopicDetail(APIView):
+    def get(self, request, pk):
+        try:
+            subtopic = Subtopic.objects.get(pk=pk)
+            serializer = SubtopicSerializer(subtopic, many=False)
+            return Response(serializer.data, status=200)
+        except Subtopic.DoesNotExist:
+            return Response(status=404)
+
     def post(self, request):
         serializer = SubtopicSerializer(data=request.data)
         if serializer.is_valid():
