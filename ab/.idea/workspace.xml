@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="179b6996-a681-4032-9c9a-a55e37c3e7a9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/group/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/group/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/group/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/group/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subject/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/subject/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subject/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/subject/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userInfo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/userInfo/models.py" afterDir="false" />
-    </list>
+    <list default="true" id="179b6996-a681-4032-9c9a-a55e37c3e7a9" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +33,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="21008" />
+          <entry key="py" value="21013" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="21008" />
+          <entry key="Python" value="21013" />
         </counts>
       </usages-collector>
     </session>
@@ -142,8 +134,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/subject/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="42" lean-forward="true" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+            <state relative-caret-position="399">
+              <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
                 <marker date="1561466878058" expanded="true" signature="248:610" ph="..." />
@@ -594,8 +586,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/subject/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="42" lean-forward="true" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+        <state relative-caret-position="399">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
             <marker date="1561466878058" expanded="true" signature="248:610" ph="..." />
