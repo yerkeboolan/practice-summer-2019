@@ -28,7 +28,7 @@ class GroupDetail(APIView):
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=201)
-        return Response(serializer.errors, status=500)
+        return Response(serializer.errors, status=400)
 
     def put(self, request, pk):
         try:
@@ -37,9 +37,9 @@ class GroupDetail(APIView):
             if serializer.is_valid():
                 serializer.save()
                 return Response(serializer.data, status=200)
-            return Response(serializer.errors, status=500)
+            return Response(serializer.errors, status=400)
         except Group.DoesNotExist:
-            return Response(serializer.errors, status=404)
+            return Response(status=404)
 
     def delete(self, request, pk):
         try:
@@ -70,7 +70,7 @@ class GroupStudentDetail(APIView):
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=201)
-        return Response(serializer.errors, status=500)
+        return Response(serializer.errors, status=400)
 
     def put(self, request, pk):
         try:
@@ -79,9 +79,9 @@ class GroupStudentDetail(APIView):
             if serializer.is_valid():
                 serializer.save()
                 return Response(serializer.data, status=200)
-            return Response(serializer.errors, status=500)
+            return Response(serializer.errors, status=400)
         except GroupStudent.DoesNotExist:
-            return Response(serializer.errors, status=404)
+            return Response(status=404)
 
 
     def delete(self, request, pk):
