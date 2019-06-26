@@ -109,10 +109,46 @@ class TopicHistory(models.Model):
 class SubtopicManager(models.Manager):
     pass
 
+
+class SubtopicHistory(models.Model):
+    title = models.CharField(max_length=255)
+    topic_id = models.IntegerField()
+    created_date = models.DateTimeField(auto_now=False, auto_now_add=False)
+    # owner
+    origin_id = models.IntegerField()
+    updated_date = models.DateTimeField(auto_now=False, auto_now_add=True)
+    is_deleted = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.title
+
 class Subtopic(models.Model):
     title = models.CharField(max_length=255)
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE, related_name="subtopic")
+    created_date = models.DateTimeField(auto_now=True, auto_now_add=False)
     # owner = models.ForeignKey(User, null=False, blank=False, on_delete=models.PROTECT)
+
+    def save(self, *args, **kwargs):
+        super(Subtopic, self).save(*args, **kwargs)
+        subtopic_history = self.get_history_ent()
+        subtopic_history.is_deleted = False
+        subtopic_history.save()
+
+    def delete(self, *args):
+        subtopic_history = self.get_history_ent()
+        subtopic_history.is_deleted = True
+        subtopic_history.save()
+        super(Subtopic, self).delete(*args)
+
+
+    def get_history_ent(self):
+        return SubtopicHistory (
+            title = self.title,
+            topic_id = self.topic.pk,
+            created_date = self.created_date,
+            origin_id = self.pk
+        )
+
 
     def __str__(self):
         return "(" + str(self.pk) + ") " + self.title
