@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'subject',
     'subjectContent',
     'userInfo',
+    'configuration',
     'rest_framework'
 ]
 
