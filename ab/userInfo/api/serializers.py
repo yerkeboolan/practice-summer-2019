@@ -1,9 +1,8 @@
 from rest_framework import serializers
-from userInfo.models import Teacher, Student
-from group.models import Group
-from configuration.models import UserStatusConfig
+from userInfo.models import Student
 
-class StudentSerializer(serializers.ModelSerializer):
+
+class StudentSerializerInfo(serializers.ModelSerializer):
     class Meta:
         model = Student
 
@@ -35,3 +34,6 @@ class StudentSerializer(serializers.ModelSerializer):
                 # print(cur)
                 data['groups'].append(cur)
         return data
+
+class StudentStatusSerializer(serializers.Serializer):
+    status = serializers.IntegerField()
