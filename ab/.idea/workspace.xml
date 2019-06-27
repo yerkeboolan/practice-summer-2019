@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="179b6996-a681-4032-9c9a-a55e37c3e7a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/configuration/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configuration/api/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configuration/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userInfo/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userInfo/api/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userInfo/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ab/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ab/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ab/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ab/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/group/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/group/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/userInfo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/userInfo/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userInfo/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/userInfo/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,58 +35,139 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="95" />
+          <entry key="py" value="111" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="95" />
+          <entry key="Python" value="111" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="27985" />
+          <entry key="py" value="30579" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="27985" />
+          <entry key="Python" value="30579" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/group/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-38">
+              <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+                <marker date="1561635627143" expanded="true" signature="174:185" ph="..." />
+                <marker date="1561635627143" expanded="true" signature="977:1141" ph="..." />
+                <marker date="1561635627143" expanded="true" signature="1251:1683" ph="..." />
+                <marker date="1561635627143" expanded="true" signature="1781:2111" ph="..." />
+                <marker date="1561635627143" expanded="true" signature="2892:3084" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/subject/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+                <marker date="1561583171664" expanded="true" signature="140:151" ph="..." />
+                <marker date="1561583171664" expanded="true" signature="827:978" ph="..." />
+                <marker date="1561583171664" expanded="true" signature="996:1005" ph="..." />
+                <marker date="1561583171664" expanded="true" signature="1120:1495" ph="..." />
+                <marker date="1561583171664" expanded="true" signature="2136:2301" ph="..." />
+                <marker date="1561583171664" expanded="true" signature="2327:2561" ph="..." />
+                <marker date="1561583171664" expanded="true" signature="2579:2588" ph="..." />
+                <marker date="1561583171664" expanded="true" signature="2756:3182" ph="..." />
+                <marker date="1561583171664" expanded="true" signature="3220:3655" ph="..." />
+                <marker date="1561583171664" expanded="true" signature="3268:3655" ph="..." />
+                <marker date="1561583171664" expanded="true" signature="4227:4403" ph="..." />
+                <marker date="1561583171664" expanded="true" signature="4429:4627" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/userInfo/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+                <marker date="1561635183308" expanded="true" signature="368:379" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/subject/api/serializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+                <marker date="1561029154261" expanded="true" signature="145:150" ph="..." />
+                <marker date="1561029154261" expanded="true" signature="869:870" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/configuration/models.py">
+        <entry file="file://$PROJECT_DIR$/userInfo/api/serializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="27" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+                <marker date="1561636821185" expanded="true" signature="219:224" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/userInfo/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="399">
-              <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-              <folding>
-                <marker date="1561632276269" expanded="true" signature="1851:1855" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/configuration/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+              <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <marker date="1561631572370" expanded="true" signature="562:1135" ph="..." />
+                <marker date="1561637343544" expanded="true" signature="482:787" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/configuration/urls.py">
+        <entry file="file://$PROJECT_DIR$/group/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            <state relative-caret-position="802">
+              <caret line="93" selection-start-line="93" selection-end-line="93" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/userInfo/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="69" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -96,39 +178,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ab/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+            <state relative-caret-position="437">
+              <caret line="23" column="47" lean-forward="true" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
               <folding>
                 <element signature="e#626#658#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/configuration/api/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#0#49#0" expanded="true" />
-                <marker date="1561630455687" expanded="true" signature="152:359" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/subject/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2371">
-              <caret line="6" column="40" lean-forward="true" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-                <marker date="1561464079880" expanded="true" signature="1388:1760" ph="..." />
-                <marker date="1561464079880" expanded="true" signature="1803:1808" ph="..." />
-                <marker date="1561464079880" expanded="true" signature="4897:5168" ph="..." />
-                <marker date="1561464079880" expanded="true" signature="5192:5201" ph="..." />
               </folding>
             </state>
           </provider>
@@ -142,6 +195,11 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>instance</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -170,16 +228,20 @@
         <option value="$PROJECT_DIR$/subject/models.py" />
         <option value="$PROJECT_DIR$/subject/admin.py" />
         <option value="$PROJECT_DIR$/group/admin.py" />
-        <option value="$PROJECT_DIR$/group/models.py" />
-        <option value="$PROJECT_DIR$/userInfo/models.py" />
         <option value="$PROJECT_DIR$/configuration/admin.py" />
         <option value="$PROJECT_DIR$/ab/settings.py" />
         <option value="$PROJECT_DIR$/configuration/api/__init__.py" />
         <option value="$PROJECT_DIR$/configuration/api/serializers.py" />
         <option value="$PROJECT_DIR$/configuration/views.py" />
         <option value="$PROJECT_DIR$/configuration/urls.py" />
-        <option value="$PROJECT_DIR$/ab/urls.py" />
         <option value="$PROJECT_DIR$/configuration/models.py" />
+        <option value="$PROJECT_DIR$/userInfo/api/__init__.py" />
+        <option value="$PROJECT_DIR$/userInfo/models.py" />
+        <option value="$PROJECT_DIR$/ab/urls.py" />
+        <option value="$PROJECT_DIR$/group/models.py" />
+        <option value="$PROJECT_DIR$/userInfo/api/serializers.py" />
+        <option value="$PROJECT_DIR$/userInfo/urls.py" />
+        <option value="$PROJECT_DIR$/userInfo/views.py" />
       </list>
     </option>
   </component>
@@ -216,18 +278,19 @@
             <path>
               <item name="ab" type="b2602c69:ProjectViewProjectNode" />
               <item name="ab" type="462c0819:PsiDirectoryNode" />
-              <item name="configuration" type="462c0819:PsiDirectoryNode" />
+              <item name="userInfo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ab" type="b2602c69:ProjectViewProjectNode" />
               <item name="ab" type="462c0819:PsiDirectoryNode" />
-              <item name="configuration" type="462c0819:PsiDirectoryNode" />
+              <item name="userInfo" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ab" type="b2602c69:ProjectViewProjectNode" />
               <item name="ab" type="462c0819:PsiDirectoryNode" />
-              <item name="studentProgress" type="462c0819:PsiDirectoryNode" />
+              <item name="userInfo" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -373,13 +436,6 @@
     <entry file="file://$PROJECT_DIR$/group/api/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/group/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/userInfo/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -387,20 +443,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/group/api/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/group/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="802">
-          <caret line="93" selection-start-line="93" selection-end-line="93" />
         </state>
       </provider>
     </entry>
@@ -433,31 +475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/group/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1368">
-          <caret line="72" column="51" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <marker date="1561585881281" expanded="true" signature="174:185" ph="..." />
-            <marker date="1561585881281" expanded="true" signature="977:1141" ph="..." />
-            <marker date="1561585881281" expanded="true" signature="1251:1683" ph="..." />
-            <marker date="1561585881281" expanded="true" signature="1781:2111" ph="..." />
-            <marker date="1561585881281" expanded="true" signature="2862:3054" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userInfo/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ab/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="665">
@@ -479,61 +496,13 @@
     <entry file="file://$PROJECT_DIR$/configuration/api/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/userInfo/views.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/subject/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1410">
-          <caret line="145" column="31" lean-forward="true" selection-start-line="145" selection-start-column="31" selection-end-line="145" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <marker date="1561583171664" expanded="true" signature="140:151" ph="..." />
-            <marker date="1561583171664" expanded="true" signature="827:978" ph="..." />
-            <marker date="1561583171664" expanded="true" signature="996:1005" ph="..." />
-            <marker date="1561583171664" expanded="true" signature="1120:1495" ph="..." />
-            <marker date="1561583171664" expanded="true" signature="2136:2301" ph="..." />
-            <marker date="1561583171664" expanded="true" signature="2327:2561" ph="..." />
-            <marker date="1561583171664" expanded="true" signature="2579:2588" ph="..." />
-            <marker date="1561583171664" expanded="true" signature="2756:3182" ph="..." />
-            <marker date="1561583171664" expanded="true" signature="3220:3655" ph="..." />
-            <marker date="1561583171664" expanded="true" signature="3268:3655" ph="..." />
-            <marker date="1561583171664" expanded="true" signature="4227:4403" ph="..." />
-            <marker date="1561583171664" expanded="true" signature="4429:4627" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/subject/api/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <marker date="1561029154261" expanded="true" signature="145:150" ph="..." />
-            <marker date="1561029154261" expanded="true" signature="869:870" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/subjectContent/views.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/configuration/api/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-            <marker date="1561630455687" expanded="true" signature="152:359" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/subject/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2371">
-          <caret line="6" column="40" lean-forward="true" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+        <state relative-caret-position="209">
+          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
             <marker date="1561464079880" expanded="true" signature="1388:1760" ph="..." />
@@ -554,16 +523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ab/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-          <folding>
-            <element signature="e#626#658#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configuration/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
@@ -575,12 +534,160 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/userInfo/api/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuration/api/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+            <marker date="1561630455687" expanded="true" signature="152:359" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/group/api/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <marker date="1561462912025" expanded="true" signature="250:255" ph="..." />
+            <marker date="1561462912025" expanded="true" signature="1116:1121" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/configuration/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        <state relative-caret-position="171">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="10" />
           <folding>
             <marker date="1561632276269" expanded="true" signature="1851:1855" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ab/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="47" lean-forward="true" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+          <folding>
+            <element signature="e#626#658#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/group/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-38">
+          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1561635627143" expanded="true" signature="174:185" ph="..." />
+            <marker date="1561635627143" expanded="true" signature="977:1141" ph="..." />
+            <marker date="1561635627143" expanded="true" signature="1251:1683" ph="..." />
+            <marker date="1561635627143" expanded="true" signature="1781:2111" ph="..." />
+            <marker date="1561635627143" expanded="true" signature="2892:3084" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subject/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1561583171664" expanded="true" signature="140:151" ph="..." />
+            <marker date="1561583171664" expanded="true" signature="827:978" ph="..." />
+            <marker date="1561583171664" expanded="true" signature="996:1005" ph="..." />
+            <marker date="1561583171664" expanded="true" signature="1120:1495" ph="..." />
+            <marker date="1561583171664" expanded="true" signature="2136:2301" ph="..." />
+            <marker date="1561583171664" expanded="true" signature="2327:2561" ph="..." />
+            <marker date="1561583171664" expanded="true" signature="2579:2588" ph="..." />
+            <marker date="1561583171664" expanded="true" signature="2756:3182" ph="..." />
+            <marker date="1561583171664" expanded="true" signature="3220:3655" ph="..." />
+            <marker date="1561583171664" expanded="true" signature="3268:3655" ph="..." />
+            <marker date="1561583171664" expanded="true" signature="4227:4403" ph="..." />
+            <marker date="1561583171664" expanded="true" signature="4429:4627" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userInfo/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1561635183308" expanded="true" signature="368:379" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subject/api/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <marker date="1561029154261" expanded="true" signature="145:150" ph="..." />
+            <marker date="1561029154261" expanded="true" signature="869:870" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studentProgress/views.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/group/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userInfo/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="69" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/group/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="802">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userInfo/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1561637343544" expanded="true" signature="482:787" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userInfo/api/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="27" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <marker date="1561636821185" expanded="true" signature="219:224" ph="..." />
           </folding>
         </state>
       </provider>

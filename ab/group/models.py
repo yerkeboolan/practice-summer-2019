@@ -73,7 +73,7 @@ class GroupStudentHistory(models.Model):
     is_deleted = models.BooleanField(default=False)
 
 class GroupStudent(models.Model):
-    student = models.ForeignKey(Student, on_delete=models.PROTECT)
+    student = models.ForeignKey(Student, on_delete=models.PROTECT, related_name='student_group')
     group = models.ForeignKey(Group, on_delete=models.PROTECT)
     created_date = models.DateTimeField(auto_now=True, auto_now_add=False)
     # owner
