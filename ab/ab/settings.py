@@ -44,7 +44,9 @@ INSTALLED_APPS = [
     'subjectContent',
     'userInfo',
     'configuration',
-    'rest_framework'
+    'auth_',
+    'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [

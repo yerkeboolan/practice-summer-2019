@@ -80,6 +80,50 @@ class RealTest(models.Model):
     score = models.IntegerField()
     subject = models.ForeignKey(Subject, on_delete=models.PROTECT)
     student = models.ForeignKey(Student, on_delete=models.PROTECT)
+    created_date = models.DateTimeField(auto_now=True, auto_now_add=False)
+
+    # owner
+
+    def get_history_ent(self):
+        return RealTestHistory(
+            date = self.date,
+            score = self.score,
+            subject_id = self.subject.pk,
+            student_id = self.student.pk,
+            created_date = self.created_date,
+            origin_id = self.pk,
+        )
+
+
+    def save(self, *args, **kwargs):
+        super(RealTest, self).save(*args, **kwargs)
+        test_history = self.get_history_ent()
+        test_history.is_deleted = False
+        test_history.save()
+
+
+    def delete(self, *args):
+        test_history = self.get_history_ent()
+        test_history.is_deleted = True
+        test_history.save()
+        super(RealTest, self).delete(*args)
+
+
+
+
+class RealTestHistory(models.Model):
+    date = models.DateField()
+    score = models.IntegerField()
+    subject_id = models.IntegerField()
+    student_id = models.IntegerField()
+    created_date = models.DateTimeField(auto_now=False, auto_now_add=False)
+
+    #owner
+
+    origin_id = models.IntegerField()
+    updated_date = models.DateTimeField(auto_now=False, auto_now_add=True)
+    is_deleted = models.BooleanField(default=False)
+
 
     objects = RealTestManager()
 # class TestResult(models.Model):

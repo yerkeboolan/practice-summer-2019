@@ -16,7 +16,7 @@ class UserStatusConfig(models.Model):
     objects = UserStatusConfigManager()
 
     def __str__(self):
-        return self.status + " " + self.is_active
+        return self.status
 
     class Meta:
         ordering = ['id', 'status']
@@ -57,7 +57,14 @@ class UserStatusConfigHistory(models.Model):
     is_deleted = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.status + " " + self.is_active
+        return self.status
+
+
+
+class QuizConfigManager(models.Manager):
+    pass
+
+# class QuizConfig(models.Model):
 
 
 
