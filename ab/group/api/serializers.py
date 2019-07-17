@@ -56,3 +56,7 @@ class GroupStudentSerializer(serializers.ModelSerializer):
                 'title': instance.group.title,
             }
         return data
+
+
+
+

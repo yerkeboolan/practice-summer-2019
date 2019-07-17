@@ -25,7 +25,7 @@ class QuizRating(models.Model):
     theory = models.IntegerField()
     practice = models.IntegerField()
     topic = models.ForeignKey(Topic, on_delete=models.PROTECT)
-    student = models.ForeignKey(Student, on_delete=models.PROTECT)
+    student = models.ForeignKey(Student, on_delete=models.PROTECT, related_name='student_quiz')
     created_date = models.DateTimeField(auto_now = True, auto_now_add=False)
     # owner
 

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
 from .models import Student, Teacher
-from userInfo.api.serializers import StudentSerializerInfo, StudentStatusSerializer
+from userInfo.api.serializers import StudentSerializerInfo, StudentStatusSerializer, StudentGroupSerializerInfo
 from configuration.models import UserStatusConfig
 from rest_framework.response import Response
 
@@ -40,5 +40,14 @@ class StudentDetail(APIView):
                 except UserStatusConfig.DoesNotExist:
                     return Response(status=404)
             return Response(serializer.errors, status=400)
+        except Student.DoesNotExist:
+            return Response(status=404)
+
+class StudentGroupFullInfo(APIView):
+    def get(self, request, student_pk):
+        try:
+            student_query = Student.objects.get(pk=student_pk)
+            serializer = StudentGroupSerializerInfo(student_query, many=False)
+            return Response(serializer.data)
         except Student.DoesNotExist:
             return Response(status=404)

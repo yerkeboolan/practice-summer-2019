@@ -1,5 +1,8 @@
 from rest_framework import serializers
 from studentProgress.models import QuizRating, RealTest
+from configuration.models import QuizConfig
+from subject.models import Topic
+from rest_framework.response import Response
 
 class QuizSerializer(serializers.ModelSerializer):
     class Meta:
@@ -15,6 +18,26 @@ class QuizSerializer(serializers.ModelSerializer):
 
         read_only_fields = ('pk', )
 
+
+    # def validate_theory(self, value):
+    #     if value and value > 100 :
+    #         # raise serializers.ValidationError("Theory must not be greater than 100")
+    #         value = 100
+    #     return value
+
+    def validate(self, data):
+        if data:
+            if data['topic']:
+                try:
+                    quizConfig = QuizConfig.objects.get(subject=data['topic'].subject)
+                except:
+                    quizConfig = None
+                if quizConfig:
+                    if not quizConfig.theory:
+                        data['theory'] = 0
+                    if not quizConfig.practice:
+                        data['practice'] = 0
+        return data
 
 
     def to_representation(self, instance):
