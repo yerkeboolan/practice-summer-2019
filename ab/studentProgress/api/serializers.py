@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from studentProgress.models import QuizRating, RealTest
 from configuration.models import QuizConfig
+from group.models import Group, GroupStudent
 from subject.models import Topic
 from rest_framework.response import Response
 
@@ -28,6 +29,9 @@ class QuizSerializer(serializers.ModelSerializer):
     def validate(self, data):
         if data:
             if data['topic']:
+                # print(data['topic'].pk)
+                # print(data['topic'].title)
+                # print(data['topic'].subject)
                 try:
                     quizConfig = QuizConfig.objects.get(subject=data['topic'].subject)
                 except:
@@ -37,6 +41,13 @@ class QuizSerializer(serializers.ModelSerializer):
                         data['theory'] = 0
                     if not quizConfig.practice:
                         data['practice'] = 0
+                if data['student']:
+                    groups_student = GroupStudent.objects.filter(student=data['student'])
+                    subjects = []
+                    for group_student in groups_student:
+                        subjects.append(group_student.group.subject)
+                    if data['topic'].subject not in subjects:
+                        raise serializers.ValidationError('errrrrrr')
         return data
 
 

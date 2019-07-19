@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from userInfo.models import Student
 from studentProgress.models import QuizRating
+from configuration.models import QuizConfig
 
 class StudentSerializerInfo(serializers.ModelSerializer):
     class Meta:
@@ -53,6 +54,7 @@ class StudentGroupSerializerInfo(serializers.ModelSerializer):
         }
 
         groups = instance.student_group.all()
+        # print(groups)
         if groups:
             data['group'] = []
             for group_student in groups:
@@ -84,11 +86,22 @@ class StudentGroupSerializerInfo(serializers.ModelSerializer):
                             'quizzes': []
                         }
                         for quiz in quizzes:
+                            theory = None
+                            practice = None
+                            quizConfig = QuizConfig.objects.get(subject=group_student.group.subject)
+                            if quizConfig.theory:
+                                theory = quiz.theory
+                            else:
+                                theory = -1
+                            if quizConfig.practice:
+                                practice = quiz.practice
+                            else:
+                                practice = -1
                             quiz = {
                                 'pk': quiz.pk,
                                 'date': quiz.date,
-                                'theory': quiz.theory,
-                                'practice': quiz.practice,
+                                'theory': theory,
+                                'practice': practice,
                             }
                             current_quiz['quizzes'].append(quiz)
                         cur['quiz'].append(current_quiz)

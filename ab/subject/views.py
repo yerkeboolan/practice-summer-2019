@@ -5,12 +5,16 @@ from rest_framework import status
 from subject.models import Subject, Topic, Subtopic
 from subject.api.serializers import SubjectSerializer, SubtopicSerializer, TopicSerializer, SubjectTopicSerializer, TopicSubtopicSerializer, SubjectTopicSubtopicSerializer
 from rest_framework.views import APIView
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.authentication import TokenAuthentication
 
 #Create your views here.
 
 
 @api_view(['GET'])
 def subject_list(request):
+    # permission_classes = (TokenAuthentication, )
+    # permission_classes = (IsAuthenticated, )
     if request.method == 'GET':
         lists = Subject.objects.all()
         serializer = SubjectSerializer(lists, many=True)
@@ -61,6 +65,8 @@ def subtopic_list(request):
         return Response(serializer.data)
 
 class SubjectList(APIView):
+    permission_classes = (IsAuthenticated, )
+    authentication_classes = (TokenAuthentication, )
     def get(self, request):
         lists = Subject.objects.all()
         serializer = SubjectSerializer(lists, many=True)
