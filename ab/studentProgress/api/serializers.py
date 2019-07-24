@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from studentProgress.models import QuizRating, RealTest
+from studentProgress.models import QuizRating, RealTest, GroupAttendance, StudentAttendance
 from configuration.models import QuizConfig
 from group.models import Group, GroupStudent
 from subject.models import Topic
@@ -103,3 +103,30 @@ class RealTestSerializer(serializers.ModelSerializer):
 
 
         return data
+
+
+
+class StudentAttSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = StudentAttendance
+        fields = ['pk', 'att', 'rating', 'group_student', ]
+
+        read_only_fields = ('pk', )
+
+
+class GroupAttSerializer(serializers.ModelSerializer):
+    student_att = StudentAttSerializer(many=True)
+
+    class Meta:
+        model = GroupAttendance
+        fields = ['pk', 'date', 'group', 'student_att', ]
+
+        read_only_fields = ('pk', )
+
+
+    def create(self, validated_data):
+        students_data = validated_data.pop('student_att')
+        group_data = GroupAttendance.objects.create(**validated_data)
+        for student_data in students_data:
+            StudentAttendance.objects.create(group_att=group_data, **student_data)
+        return group_data

@@ -6,16 +6,27 @@ from subject.models import Topic, Subject
 # Create your models here.
 
 
+class GroupAttendanceManager(models.Manager):
+    pass
+
 class GroupAttendance(models.Model):
     date = models.DateField()
-    group = models.ForeignKey(Group, on_delete=models.CASCADE)
+    group = models.ForeignKey(Group, on_delete=models.PROTECT)
+
+    objects = GroupAttendanceManager()
+
+
+
+class StudentAttendanceManager(models.Manager):
+    pass
 
 class StudentAttendance(models.Model):
     att = models.BooleanField()
     rating = models.FloatField()
-    date = models.ForeignKey(GroupAttendance, on_delete=models.CASCADE)
-    group_student = models.ForeignKey(GroupStudent, on_delete=models.CASCADE)
+    group_att = models.ForeignKey(GroupAttendance, on_delete=models.PROTECT, related_name='student_att')
+    group_student = models.ForeignKey(GroupStudent, on_delete=models.PROTECT)
 
+    objects = StudentAttendanceManager()
 
 class QuizRatingManager(models.Manager):
     pass

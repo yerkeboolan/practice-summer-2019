@@ -2,11 +2,27 @@ from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import status
-from studentProgress.models import QuizRating, RealTest
-from studentProgress.api.serializers import QuizSerializer, RealTestSerializer
+from studentProgress.models import QuizRating, RealTest, GroupAttendance
+from studentProgress.api.serializers import QuizSerializer, RealTestSerializer, GroupAttSerializer
 from rest_framework.views import APIView
 
 # Create your views here.
+
+
+class GroupAttendanceList(APIView):
+    def get(self, request, group_pk):
+        lists = GroupAttendance.objects.filter(group__pk = group_pk)
+        serializer = GroupAttSerializer(lists, many=True)
+        return Response(serializer.data, status=200)
+
+
+class GroupAttendanceDetail(APIView):
+    def post(self, request):
+        serializer = GroupAttSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=201)
+        return Response(serializer.errors, status=400)
 
 
 class QuizDetail(APIView):
