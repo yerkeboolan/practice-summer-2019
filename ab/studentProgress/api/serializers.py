@@ -151,3 +151,34 @@ class GroupAttSerializer(serializers.ModelSerializer):
                 rating = -1
             )
         return group_data
+
+    def update(self, instance, validated_data):
+        instance.date = validated_data.get("date", instance.date)
+        instance.group = validated_data.get("group", instance.group)
+        instance.save()
+
+        students_data = validated_data.get('student_att')
+
+        group_students_pk = []
+
+        for student_data in students_data:
+            student_pk = student_data.get('pk')
+            if student_pk:
+                tmp_student_data = StudentAttendance.objects.get(pk=student_pk, group_att=instance)
+                tmp_student_data.att = student_data.get('att', tmp_student_data.att)
+                tmp_student_data.rating = student_data.get('rating', tmp_student_data.rating)
+                tmp_student_data.group_student = student_data.get('group_student', tmp_student_data.group_student)
+                tmp_student_data.save()
+            # group_students_pk.append(student_data['group_student'].pk)
+            StudentAttendance.objects.create(group_att=instance, **student_data)
+            # group_students = GroupStudent.objects.filter(group=validated_data['group']).exclude(pk__in=group_students_pk)
+            # for group_student in group_students:
+            #     StudentAttendance.objects.create(
+            #         group_att=instance,
+            #         group_student=group_student,
+            #         att=False,
+            #         rating=-1
+            #     )
+
+        # instance.save()
+        return instance
