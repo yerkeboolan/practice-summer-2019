@@ -8,6 +8,6 @@ urlpatterns = [
     path('test/<pk>/', views.RealTestDetail.as_view()),
     path('test/', views.RealTestDetail.as_view()),
 
-    path('attendance/', views.GroupAttendanceDetail.as_view()),
-    path('attendance/<group_pk>/', views.GroupAttendanceList.as_view())
+    path('get/attendance/<group_pk>/', views.GroupAttendanceList.as_view()),
+    path('set/attendance/', views.GroupAttendanceDetail.as_view())
 ]

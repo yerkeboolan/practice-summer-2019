@@ -84,7 +84,8 @@ class Topic(models.Model):
         )
 
     def __str__(self):
-        return "(" + str(self.pk) + ") " + self.title
+        is_quiz = "(Quiz)" if self.is_quiz else ""
+        return "(" + str(self.pk) + ") " + self.title + is_quiz
 
     class Meta:
         ordering = ['title', 'is_quiz']

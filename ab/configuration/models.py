@@ -75,7 +75,7 @@ class QuizConfig(models.Model):
     objects = QuizConfigManager()
 
     def __str__(self):
-        return self.subject
+        return self.subject.title
 
     class Meta:
         ordering = ['id', 'subject']

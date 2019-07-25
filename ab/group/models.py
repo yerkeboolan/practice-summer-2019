@@ -100,5 +100,8 @@ class GroupStudent(models.Model):
         groupStudent_history.save()
         super(GroupStudent, self).delete(*args)
 
+    class Meta:
+        unique_together = ('student', 'group',)
+
 
     objects = GroupStudentManager()

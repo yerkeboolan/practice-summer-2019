@@ -32,6 +32,8 @@ class QuizSerializer(serializers.ModelSerializer):
                 # print(data['topic'].pk)
                 # print(data['topic'].title)
                 # print(data['topic'].subject)
+                if not data['topic'].is_quiz:
+                    raise serializers.ValidationError('This topic is not for quiz')
                 try:
                     quizConfig = QuizConfig.objects.get(subject=data['topic'].subject)
                 except:
@@ -127,6 +129,25 @@ class GroupAttSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         students_data = validated_data.pop('student_att')
         group_data = GroupAttendance.objects.create(**validated_data)
+        group_students_pk = []
         for student_data in students_data:
+            if not student_data['att']:
+                student_data['rating'] = -1
+            group_students_pk.append(student_data['group_student'].pk)
             StudentAttendance.objects.create(group_att=group_data, **student_data)
+        group_students = GroupStudent.objects.filter(group=validated_data['group']).exclude(pk__in=group_students_pk)
+        for group_student in group_students:
+            # student_att = StudentAttendance
+            # student_att.group_att = group_data
+            # student_att.group_student = group_student
+            # student_att.att = False
+            # student_att.rating = -1
+            # student_att.save()
+
+            StudentAttendance.objects.create(
+                group_att = group_data,
+                group_student = group_student,
+                att = False,
+                rating = -1
+            )
         return group_data

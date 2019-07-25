@@ -76,6 +76,8 @@ class StudentGroupSerializerInfo(serializers.ModelSerializer):
                 # select * from quiz_rating where topic_id =  and student_id = 2
                 student = instance.pk
                 for topic in topics:
+                    if not topic.is_quiz:
+                        continue
                     try:
                         quizzes = QuizRating.objects.filter(topic=topic, student=student)
                         current_quiz = {

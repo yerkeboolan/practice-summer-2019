@@ -15,7 +15,11 @@ class GroupAttendance(models.Model):
 
     objects = GroupAttendanceManager()
 
+    def __str__(self):
+        return self.group.title
 
+    class Meta:
+        unique_together = ('date', 'group', )
 
 class StudentAttendanceManager(models.Manager):
     pass
