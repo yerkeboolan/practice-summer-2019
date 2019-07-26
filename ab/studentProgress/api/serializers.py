@@ -137,12 +137,6 @@ class GroupAttSerializer(serializers.ModelSerializer):
             StudentAttendance.objects.create(group_att=group_data, **student_data)
         group_students = GroupStudent.objects.filter(group=validated_data['group']).exclude(pk__in=group_students_pk)
         for group_student in group_students:
-            # student_att = StudentAttendance
-            # student_att.group_att = group_data
-            # student_att.group_student = group_student
-            # student_att.att = False
-            # student_att.rating = -1
-            # student_att.save()
 
             StudentAttendance.objects.create(
                 group_att = group_data,
@@ -159,26 +153,16 @@ class GroupAttSerializer(serializers.ModelSerializer):
 
         students_data = validated_data.get('student_att')
 
-        group_students_pk = []
-
         for student_data in students_data:
-            student_pk = student_data.get('pk')
-            if student_pk:
-                tmp_student_data = StudentAttendance.objects.get(pk=student_pk, group_att=instance)
+            if student_data:
+                tmp_student_data = StudentAttendance.objects.get(group_student=student_data['group_student'], group_att=instance)
                 tmp_student_data.att = student_data.get('att', tmp_student_data.att)
-                tmp_student_data.rating = student_data.get('rating', tmp_student_data.rating)
+                if not tmp_student_data.att:
+                    tmp_student_data.rating = -1
+                else:
+                    tmp_student_data.rating = student_data.get('rating', tmp_student_data.rating)
                 tmp_student_data.group_student = student_data.get('group_student', tmp_student_data.group_student)
                 tmp_student_data.save()
-            # group_students_pk.append(student_data['group_student'].pk)
-            StudentAttendance.objects.create(group_att=instance, **student_data)
-            # group_students = GroupStudent.objects.filter(group=validated_data['group']).exclude(pk__in=group_students_pk)
-            # for group_student in group_students:
-            #     StudentAttendance.objects.create(
-            #         group_att=instance,
-            #         group_student=group_student,
-            #         att=False,
-            #         rating=-1
-            #     )
-
-        # instance.save()
+            else:
+                StudentAttendance.objects.create(group_att=instance, **student_data)
         return instance

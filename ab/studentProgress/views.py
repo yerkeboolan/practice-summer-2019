@@ -24,9 +24,9 @@ class GroupAttendanceDetail(APIView):
             return Response(serializer.data, status=201)
         return Response(serializer.errors, status=400)
 
-    def put(self, request, group_pk):
+    def put(self, request, group_attendance_pk):
         try:
-            group_query = GroupAttendance.objects.get(group__pk = group_pk)
+            group_query = GroupAttendance.objects.get(pk = group_attendance_pk)
             serializer = GroupAttSerializer(group_query, data=request.data, partial=False)
             if serializer.is_valid():
                 serializer.save()

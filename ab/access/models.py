@@ -1,16 +1,10 @@
 from django.db import models
-from subject.models import Subtopic
 from group.models import GroupStudent
-from subjectContent.models import Test
+from subjectContent.models import Test, Video
 
 # Create your models here.
 
-class Video(models.Model):
-    url = models.URLField()
-    subtopic = models.ForeignKey(Subtopic, on_delete=models.CASCADE)
 
-    def __str__(self):
-        return self.url
 
 class VideoAccess(models.Model):
     access = models.BooleanField()

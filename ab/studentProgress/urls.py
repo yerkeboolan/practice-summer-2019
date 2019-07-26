@@ -10,5 +10,5 @@ urlpatterns = [
 
     path('get/attendance/<group_pk>/', views.GroupAttendanceList.as_view()),
     path('set/attendance/', views.GroupAttendanceDetail.as_view()),
-    path('update/attendance/<group_pk>/', views.GroupAttendanceDetail.as_view())
+    path('update/attendance/<group_attendance_pk>/', views.GroupAttendanceDetail.as_view())
 ]

@@ -32,6 +32,12 @@ class StudentAttendance(models.Model):
 
     objects = StudentAttendanceManager()
 
+    class Meta:
+        ordering = ("pk",)
+
+    def __str__(self):
+        return "(" + str(self.pk) + ") " + str(self.group_att.date) + " " + self.group_student.student.info.last_name + " " + self.group_student.student.info.first_name
+
 class QuizRatingManager(models.Manager):
     pass
 
