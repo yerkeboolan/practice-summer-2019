@@ -12,6 +12,7 @@ class GroupAttendanceManager(models.Manager):
 class GroupAttendance(models.Model):
     date = models.DateField()
     group = models.ForeignKey(Group, on_delete=models.PROTECT)
+    created_date = models.DateTimeField(auto_now=True, auto_now_add=False)
 
     objects = GroupAttendanceManager()
 
@@ -21,6 +22,45 @@ class GroupAttendance(models.Model):
     class Meta:
         unique_together = ('date', 'group', )
 
+
+
+    def get_history_ent(self):
+        return GroupAttendanceHistory(
+            date = self.date,
+            group_id = self.group.pk,
+            created_date = self.created_date,
+            origin_id = self.pk
+
+        )
+
+
+    def save(self, *args, **kwargs):
+        super(GroupAttendance, self).save(*args, **kwargs)
+        group_att_history = self.get_history_ent()
+        group_att_history.is_deleted = False
+        group_att_history.save()
+
+
+    def delete(self, *args):
+        group_att_history = self.get_history_ent()
+        group_att_history.is_deleted = True
+        group_att_history.save()
+        super(GroupAttendance, self).delete(*args)
+
+
+
+
+class GroupAttendanceHistory(models.Model):
+    date = models.DateField()
+    group_id = models.IntegerField()
+    created_date = models.DateTimeField(auto_now=False, auto_now_add=False)
+    # owner
+    origin_id = models.IntegerField()
+    updated_date = models.DateTimeField(auto_now=False, auto_now_add=True)
+    is_deleted = models.BooleanField(default=False)
+
+
+
 class StudentAttendanceManager(models.Manager):
     pass
 
@@ -29,6 +69,7 @@ class StudentAttendance(models.Model):
     rating = models.FloatField()
     group_att = models.ForeignKey(GroupAttendance, on_delete=models.PROTECT, related_name='student_att')
     group_student = models.ForeignKey(GroupStudent, on_delete=models.PROTECT)
+    created_date = models.DateTimeField(auto_now=True, auto_now_add=False)
 
     objects = StudentAttendanceManager()
 
@@ -37,6 +78,45 @@ class StudentAttendance(models.Model):
 
     def __str__(self):
         return "(" + str(self.pk) + ") " + str(self.group_att.date) + " " + self.group_student.student.info.last_name + " " + self.group_student.student.info.first_name
+
+
+    def get_history_ent(self):
+        return StudentAttendanceHistory(
+            att = self.att,
+            rating = self.rating,
+            group_att_id = self.group_att.pk,
+            group_student_id = self.group_student.pk,
+            created_date = self.created_date,
+            origin_id = self.pk
+        )
+
+    def save(self, *args, **kwargs):
+        super(StudentAttendance, self).save(*args, **kwargs)
+        student_att_history = self.get_history_ent()
+        student_att_history.is_deleted = False
+        student_att_history.save()
+
+
+    def delete(self, *args):
+        student_att_history = self.get_history_ent()
+        student_att_history.is_deleted = True
+        student_att_history.save()
+        super(StudentAttendance, self).delete(*args)
+
+
+
+class StudentAttendanceHistory(models.Model):
+    att = models.BooleanField()
+    rating = models.FloatField()
+    group_att_id = models.IntegerField()
+    group_student_id = models.IntegerField()
+    created_date = models.DateTimeField(auto_now=False, auto_now_add=False)
+    # owner
+    origin_id = models.IntegerField()
+    updated_date = models.DateTimeField(auto_now=False, auto_now_add=True)
+    is_deleted = models.BooleanField(default=False)
+
+
 
 class QuizRatingManager(models.Manager):
     pass

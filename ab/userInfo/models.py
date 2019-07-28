@@ -22,3 +22,6 @@ class Student(models.Model):
 
     objects = StudentManager()
 
+
+
+

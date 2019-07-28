@@ -9,11 +9,50 @@ class VideoManager(models.Manager):
 class Video(models.Model):
     url = models.URLField()
     subtopic = models.ForeignKey(Subtopic, on_delete=models.PROTECT)
+    created_date = models.DateTimeField(auto_now=True, auto_now_add=False)
 
     def __str__(self):
         return self.url
 
     objects = VideoManager()
+
+
+    def get_history_ent(self):
+        return VideoHistory(
+            url = self.url,
+            subtopic_id = self.subtopic.pk,
+            created_date = self.created_date,
+            origin_id = self.pk
+        )
+
+
+    def save(self, *args, **kwargs):
+        super(Video, self).save(*args, **kwargs)
+        video_history = self.get_history_ent()
+        video_history.is_deleted = False
+        video_history.save()
+
+
+    def delete(self, *args):
+        video_history = self.get_history_ent()
+        video_history.is_deleted = True
+        video_history.save()
+        super(Video, self).delete(*args)
+
+
+
+class VideoHistory(models.Model):
+    url = models.URLField()
+    subtopic_id = models.IntegerField()
+    created_date = models.DateTimeField(auto_now=False, auto_now_add=False)
+    # owner
+    origin_id = models.IntegerField()
+    updated_date = models.DateTimeField(auto_now=False, auto_now_add=True)
+    is_deleted = models.BooleanField(default=False)
+
+
+    def __str__(self):
+        return self.url
 
 class TestManager(models.Manager):
     pass

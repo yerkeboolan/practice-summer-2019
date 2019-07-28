@@ -30,6 +30,15 @@ class AnswerSerializer(serializers.ModelSerializer):
 
         read_only_fields = ('pk', )
 
+
+    #
+    # def validate(self, data):
+    #     true_ans = 0
+    #     if data:
+    #         if data['answer']:
+    #             if data['flag']:
+
+
 class QuestionSerializer(serializers.ModelSerializer):
     ans_question = AnswerSerializer(many=True)
 
@@ -38,6 +47,7 @@ class QuestionSerializer(serializers.ModelSerializer):
         fields = ('pk', 'question', 'test', 'ans_question', )
 
         read_only_fields = ('pk',)
+
 
 
     def create(self, validated_data):
