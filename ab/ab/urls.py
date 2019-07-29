@@ -24,5 +24,6 @@ urlpatterns = [
     path('userInfo/', include('userInfo.urls')),
     path('studentProgress/', include('studentProgress.urls')),
     path('auth_/', include('auth_.urls')),
-    path('subjectContent/', include('subjectContent.urls'))
+    path('subjectContent/', include('subjectContent.urls')),
+    path('access/', include('access.urls'))
 ]

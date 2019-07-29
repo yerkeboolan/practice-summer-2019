@@ -89,3 +89,14 @@ class QuestionDetail(APIView):
             serializer.save()
             return Response(serializer.data, status=201)
         return Response(serializer.errors, status=400)
+
+    def put(self, request, question_pk):
+        try:
+            question_query = Question.objects.get(pk=question_pk)
+            serializer = QuestionSerializer(question_query, data=request.data, partial=False)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data, status=201)
+            return Response(serializer.errors, status=400)
+        except Question.DoesNotExist:
+            return Response(status=404)

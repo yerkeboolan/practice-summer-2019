@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="179b6996-a681-4032-9c9a-a55e37c3e7a9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/access/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/access/api/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/access/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ab/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ab/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/access/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/access/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/access/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/access/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/studentProgress/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/studentProgress/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/studentProgress/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/studentProgress/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjectContent/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectContent/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subjectContent/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectContent/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjectContent/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectContent/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userInfo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/userInfo/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjectContent/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectContent/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjectContent/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectContent/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +42,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="json" value="1" />
-          <entry key="py" value="281" />
+          <entry key="py" value="298" />
           <entry key="sqlite3" value="3" />
         </counts>
       </usages-collector>
@@ -46,38 +50,99 @@
         <counts>
           <entry key="JSON" value="1" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="281" />
+          <entry key="Python" value="298" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
-          <entry key="py" value="64066" />
+          <entry key="py" value="69881" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="64066" />
+          <entry key="Python" value="69881" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/subjectContent/api/serializers.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/access/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="37" column="16" lean-forward="true" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+            <state relative-caret-position="228">
+              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+                <marker date="1564396033014" expanded="true" signature="185:197" ph="..." />
+                <marker date="1564396033014" expanded="true" signature="485:497" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/subjectContent/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="12" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+                <marker date="1564314443809" expanded="true" signature="129:140" ph="..." />
+                <marker date="1564314443809" expanded="true" signature="1068:1073" ph="..." />
+                <marker date="1564314443809" expanded="true" signature="1068:1440" ph="..." />
+                <marker date="1564314443809" expanded="true" signature="1474:1479" ph="..." />
+                <marker date="1564314443809" expanded="true" signature="1474:1485" ph="..." />
+                <marker date="1564314443809" expanded="true" signature="1660:1669" ph="..." />
+                <marker date="1564314443809" expanded="true" signature="1764:1775" ph="..." />
+                <marker date="1564314443809" expanded="true" signature="2117:2128" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/access/api/serializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
-                <marker date="1564315707620" expanded="true" signature="156:161" ph="..." />
-                <marker date="1564315707620" expanded="true" signature="363:368" ph="..." />
-                <marker date="1564315707620" expanded="true" signature="689:694" ph="..." />
-                <marker date="1564315707620" expanded="true" signature="963:968" ph="..." />
-                <marker date="1564315707620" expanded="true" signature="1152:1158" ph="..." />
-                <marker date="1564315707620" expanded="true" signature="1888:2072" ph="..." />
+                <marker date="1564399436675" expanded="true" signature="149:154" ph="..." />
+                <marker date="1564399436675" expanded="true" signature="350:355" ph="..." />
+                <marker date="1564399436675" expanded="true" signature="491:498" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/access/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="703">
+              <caret line="37" column="54" lean-forward="true" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+                <marker date="1564399508367" expanded="true" signature="347:352" ph="..." />
+                <marker date="1564399508367" expanded="true" signature="1122:1127" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/subjectContent/api/serializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1045">
+              <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+                <marker date="1564395046994" expanded="true" signature="156:161" ph="..." />
+                <marker date="1564395046994" expanded="true" signature="363:368" ph="..." />
+                <marker date="1564395046994" expanded="true" signature="689:694" ph="..." />
+                <marker date="1564395046994" expanded="true" signature="1015:1020" ph="..." />
               </folding>
             </state>
           </provider>
@@ -86,7 +151,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studentProgress/api/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2584">
+            <state relative-caret-position="560">
               <caret line="146" column="25" lean-forward="true" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
@@ -99,14 +164,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/subjectContent/views.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/access/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+            <state relative-caret-position="95">
+              <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
-                <marker date="1564140682360" expanded="true" signature="1717:2424" ph="..." />
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ab/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
+              <folding>
+                <element signature="e#626#658#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -141,7 +217,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/edu/admin.py" />
         <option value="$PROJECT_DIR$/edu/models.py" />
         <option value="$PROJECT_DIR$/userInfo/admin.py" />
         <option value="$PROJECT_DIR$/subject/serializers.py" />
@@ -178,21 +253,25 @@
         <option value="$PROJECT_DIR$/studentProgress/urls.py" />
         <option value="$PROJECT_DIR$/studentProgress/api/serializers.py" />
         <option value="$PROJECT_DIR$/access/admin.py" />
-        <option value="$PROJECT_DIR$/access/models.py" />
         <option value="$PROJECT_DIR$/subjectContent/api/__init__.py" />
-        <option value="$PROJECT_DIR$/ab/urls.py" />
-        <option value="$PROJECT_DIR$/subjectContent/urls.py" />
-        <option value="$PROJECT_DIR$/subjectContent/views.py" />
         <option value="$PROJECT_DIR$/studentProgress/models.py" />
         <option value="$PROJECT_DIR$/studentProgress/admin.py" />
         <option value="$PROJECT_DIR$/userInfo/models.py" />
         <option value="$PROJECT_DIR$/subjectContent/admin.py" />
         <option value="$PROJECT_DIR$/subjectContent/models.py" />
+        <option value="$PROJECT_DIR$/subjectContent/urls.py" />
+        <option value="$PROJECT_DIR$/subjectContent/views.py" />
         <option value="$PROJECT_DIR$/subjectContent/api/serializers.py" />
+        <option value="$PROJECT_DIR$/access/api/__init__.py" />
+        <option value="$PROJECT_DIR$/access/models.py" />
+        <option value="$PROJECT_DIR$/ab/urls.py" />
+        <option value="$PROJECT_DIR$/access/api/serializers.py" />
+        <option value="$PROJECT_DIR$/access/views.py" />
+        <option value="$PROJECT_DIR$/access/urls.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="240" />
     <option name="y" value="130" />
     <option name="width" value="1440" />
@@ -210,6 +289,16 @@
             <path>
               <item name="ab" type="b2602c69:ProjectViewProjectNode" />
               <item name="ab" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ab" type="462c0819:PsiDirectoryNode" />
+              <item name="ab" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ab" type="462c0819:PsiDirectoryNode" />
+              <item name="access" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ab" type="b2602c69:ProjectViewProjectNode" />
@@ -314,43 +403,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/configuration/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-            <marker date="1563354081329" expanded="true" signature="567:694" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configuration/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configuration/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/group/api/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="57" column="19" lean-forward="true" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <marker date="1563361992224" expanded="true" signature="250:255" ph="..." />
-            <marker date="1563361992224" expanded="true" signature="1116:1121" ph="..." />
-            <marker date="1563361992224" expanded="true" signature="1857:1858" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configuration/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1406">
@@ -365,17 +417,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/studentProgress/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configuration/api/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-            <marker date="1563353900320" expanded="true" signature="428:626" ph="..." />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/group/urls.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -535,16 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/access/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studentProgress/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -565,16 +596,6 @@
           <folding>
             <element signature="e#0#38#0" expanded="true" />
             <marker date="1564054001964" expanded="true" signature="223:228" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ab/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
-          <folding>
-            <element signature="e#626#658#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -624,16 +645,6 @@
           <folding>
             <element signature="e#0#35#0" expanded="true" />
             <marker date="1564129615682" expanded="true" signature="697:1475" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/subjectContent/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="57" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -700,24 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/subjectContent/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-129">
-          <caret line="54" column="23" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <marker date="1564314443809" expanded="true" signature="129:140" ph="..." />
-            <marker date="1564314443809" expanded="true" signature="1068:1073" ph="..." />
-            <marker date="1564314443809" expanded="true" signature="1068:1440" ph="..." />
-            <marker date="1564314443809" expanded="true" signature="1474:1479" ph="..." />
-            <marker date="1564314443809" expanded="true" signature="1474:1485" ph="..." />
-            <marker date="1564314443809" expanded="true" signature="1660:1669" ph="..." />
-            <marker date="1564314443809" expanded="true" signature="1764:1775" ph="..." />
-            <marker date="1564314443809" expanded="true" signature="2117:2128" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/userInfo/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -730,21 +723,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/subjectContent/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <marker date="1564140682360" expanded="true" signature="1717:2424" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studentProgress/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2109">
-          <caret line="111" column="20" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
+        <state relative-caret-position="855">
+          <caret line="53" column="29" lean-forward="true" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
             <marker date="1564313526976" expanded="true" signature="227:238" ph="..." />
@@ -762,9 +744,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/subjectContent/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="88" column="27" selection-start-line="88" selection-start-column="23" selection-end-line="88" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1564394351139" expanded="true" signature="1717:2424" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subjectContent/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/access/api/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuration/api/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+            <marker date="1563353900320" expanded="true" signature="428:626" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ab/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
+          <folding>
+            <element signature="e#626#658#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/studentProgress/api/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2584">
+        <state relative-caret-position="560">
           <caret line="146" column="25" lean-forward="true" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
@@ -776,18 +803,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/subjectContent/api/serializers.py">
+    <entry file="file://$PROJECT_DIR$/subjectContent/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="37" column="16" lean-forward="true" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+        <state relative-caret-position="190">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1564314443809" expanded="true" signature="129:140" ph="..." />
+            <marker date="1564314443809" expanded="true" signature="1068:1073" ph="..." />
+            <marker date="1564314443809" expanded="true" signature="1068:1440" ph="..." />
+            <marker date="1564314443809" expanded="true" signature="1474:1479" ph="..." />
+            <marker date="1564314443809" expanded="true" signature="1474:1485" ph="..." />
+            <marker date="1564314443809" expanded="true" signature="1660:1669" ph="..." />
+            <marker date="1564314443809" expanded="true" signature="1764:1775" ph="..." />
+            <marker date="1564314443809" expanded="true" signature="2117:2128" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/access/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1564396033014" expanded="true" signature="185:197" ph="..." />
+            <marker date="1564396033014" expanded="true" signature="485:497" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/access/api/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
-            <marker date="1564315707620" expanded="true" signature="156:161" ph="..." />
-            <marker date="1564315707620" expanded="true" signature="363:368" ph="..." />
-            <marker date="1564315707620" expanded="true" signature="689:694" ph="..." />
-            <marker date="1564315707620" expanded="true" signature="963:968" ph="..." />
-            <marker date="1564315707620" expanded="true" signature="1152:1158" ph="..." />
-            <marker date="1564315707620" expanded="true" signature="1888:2072" ph="..." />
+            <marker date="1564399436675" expanded="true" signature="149:154" ph="..." />
+            <marker date="1564399436675" expanded="true" signature="350:355" ph="..." />
+            <marker date="1564399436675" expanded="true" signature="491:498" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/access/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="37" column="54" lean-forward="true" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1564399508367" expanded="true" signature="347:352" ph="..." />
+            <marker date="1564399508367" expanded="true" signature="1122:1127" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subjectContent/api/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1045">
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <marker date="1564395046994" expanded="true" signature="156:161" ph="..." />
+            <marker date="1564395046994" expanded="true" signature="363:368" ph="..." />
+            <marker date="1564395046994" expanded="true" signature="689:694" ph="..." />
+            <marker date="1564395046994" expanded="true" signature="1015:1020" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/access/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>

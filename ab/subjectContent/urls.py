@@ -12,5 +12,6 @@ urlpatterns = [
     path('test/<pk>/', TestDetail.as_view()),
 
     path('questions/<test_pk>/', QuestionList.as_view()),
-    path('question/', QuestionDetail.as_view())
+    path('question/', QuestionDetail.as_view()),
+    path('question/<question_pk>/', QuestionDetail.as_view())
 ]
