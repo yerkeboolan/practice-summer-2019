@@ -4,11 +4,17 @@ from configuration.models import UserStatusConfig
 
 # Create your models here.
 
+class TeacherManager(models.Manager):
+    pass
+
 class Teacher(models.Model):
     info = models.ForeignKey(User, on_delete=models.PROTECT)
 
     def __str__(self):
         return self.info.first_name + " " + self.info.last_name
+
+
+    objects = TeacherManager()
 
 class StudentManager(models.Manager):
     pass

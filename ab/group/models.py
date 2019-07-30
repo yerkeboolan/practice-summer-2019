@@ -10,8 +10,8 @@ class GroupManager(models.Manager):
 
 class Group(models.Model):
     title = models.CharField(max_length=255)
-    subject = models.ForeignKey(Subject, on_delete=models.PROTECT)
-    teacher = models.ForeignKey(Teacher, on_delete=models.PROTECT)
+    subject = models.ForeignKey(Subject, on_delete=models.PROTECT, related_name="subject")
+    teacher = models.ForeignKey(Teacher, on_delete=models.PROTECT, related_name="group_teacher")
     created_date = models.DateTimeField(auto_now=True, auto_now_add=False)
     # owner
 

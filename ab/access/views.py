@@ -29,6 +29,15 @@ class VideoAccessDetail(APIView):
             return Response(status=404)
 
 
+    def delete(self, request, pk):
+        try:
+            access_query = VideoAccess.objects.get(pk=pk)
+            access_query.delete()
+            return Response(status=204)
+        except VideoAccess.DoesNotExist:
+            return Response(status=404)
+
+
 class TestAccessDetail(APIView):
     def post(self, request):
         serializer = TestAccessSerializer(data=request.data)
@@ -36,3 +45,23 @@ class TestAccessDetail(APIView):
             serializer.save()
             return Response(serializer.data, status=201)
         return Response(serializer.errors, status=400)
+
+
+    def put(self, request, pk):
+        try:
+            access_query = TestAccess.objects.get(pk=pk)
+            serializer = TestAccessSerializer(access_query, data=request.data, partial=False)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data, status=201)
+            return Response(serializer.errors, status=400)
+        except TestAccess.DoesNotExist:
+            return Response(status=404)
+
+    def delete(self, request, pk):
+        try:
+            access_query = TestAccess.objects.get(pk=pk)
+            access_query.delete()
+            return Response(status=204)
+        except TestAccess.DoesNotExist:
+            return Response(status=404)

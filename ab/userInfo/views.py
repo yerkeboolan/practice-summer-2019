@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
 from .models import Student, Teacher
-from userInfo.api.serializers import StudentSerializerInfo, StudentStatusSerializer, StudentGroupSerializerInfo
+from userInfo.api.serializers import StudentSerializerInfo, StudentStatusSerializer, StudentGroupSerializerInfo, UserSerializer, TeacherSerializerInfo
 from configuration.models import UserStatusConfig
 from rest_framework.response import Response
 
@@ -43,6 +43,15 @@ class StudentDetail(APIView):
         except Student.DoesNotExist:
             return Response(status=404)
 
+
+    def post(self, request):
+        serializer = UserSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            Student.objects.create(info = serializer.instance)
+            return Response(serializer.data, status=201)
+        return Response(serializer.errors, status=400)
+
 class StudentGroupFullInfo(APIView):
     def get(self, request, student_pk):
         try:
@@ -51,3 +60,22 @@ class StudentGroupFullInfo(APIView):
             return Response(serializer.data)
         except Student.DoesNotExist:
             return Response(status=404)
+
+
+class TeacherList(APIView):
+    def get(self, request):
+        lists = Teacher.objects.all()
+        serializer = TeacherSerializerInfo(lists, many=True)
+        return Response(serializer.data, status=200)
+
+
+
+class TeacherDetail(APIView):
+
+    def post(self, request):
+        serializer = UserSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            Teacher.objects.create(info = serializer.instance)
+            return Response(serializer.data, status=201)
+        return Response(serializer.errors, status=400)
